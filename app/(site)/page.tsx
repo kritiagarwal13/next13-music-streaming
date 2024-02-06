@@ -1,5 +1,5 @@
 import getSongs from "@/actions/getSongs";
-import PageContent from "@/components/PageContent";
+import PageContent from "@/app/(site)/components/PageContent";
 import Header from "@/components/header";
 import ListItem from "@/components/listItem";
 
