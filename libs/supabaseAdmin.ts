@@ -82,7 +82,6 @@ const upsertPriceRecord = async (price: Stripe.Price) => {
     uuid: string,
     payment_method: Stripe.PaymentMethod
   ) => {
-    //Todo: check this assertion
     const customer = payment_method.customer as string;
     const { name, phone, address } = payment_method.billing_details;
     if (!name || !phone || !address) return;
@@ -125,7 +124,6 @@ const upsertPriceRecord = async (price: Stripe.Price) => {
         // @ts-ignore
         status: subscription.status,
         price_id: subscription.items.data[0].price.id,
-        //TODO check quantity on subscription
         // @ts-ignore
         quantity: subscription.quantity,
         cancel_at_period_end: subscription.cancel_at_period_end,
